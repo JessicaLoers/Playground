@@ -20,8 +20,8 @@ header {
   flex-direction: column;
 }
 ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 li {
@@ -40,51 +40,54 @@ li {
   margin: 0;
 }
 
-
-
-
 footer {
-    /* padding: 0;
+  /* padding: 0;
     margin: 0;
     background-color: mediumpurple;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around; */
-
 }
 
-
 footer {
-    background-color: lawngreen;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    align-items: center;
-    text-align: center;
+  background-color: lawngreen;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
 }
 
 .impressum {
-    grid-column: 1 / 4 ;
+  grid-column: 1 / 4;
 }
 
 .copyright {
-    grid-column: 1 / 4;
-
-
+  grid-column: 1 / 4;
 }
 
 .footer_icons {
-    width: 50%
+  width: 55%;
+}
+
+.btn_--right {
+display: flex;
+justify-content: flex-end;
 }
 
 
-
-/* footer a img {
-    width: 10%;
-} */
-
-
+.btn_up {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 100%;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 
 @media (min-width: 500px) {
   header {
@@ -94,17 +97,43 @@ footer {
     justify-content: space-between;
   }
   .logo {
-    width: 20%;
+    width: 150px;
     margin: 0 0 0 30px;
   }
   .nav ul {
     margin: 0 30px 0 0;
   }
   h1 {
-      display: none;
+    display: none;
+  }
+
+  footer {
+    background-color: lawngreen;
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    align-items: center;
+    text-align: center;
+  }
+
+  .impressum {
+    grid-column: 1 / 6;
   }
   
-  .footer_icons {
-      width: 20%;
+  .copyright {
+    grid-column: 1 / 6;
   }
+
+  .footer_icons {
+    width: 10%;
+  }
+  /* .icon_codepen {
+      grid-column: 2 /3 ;
+  }
+  .icon_github {
+      grid-column: 3 / 4;
+  }
+  .icon_behance {
+      grid-column-start:  5 / 6;
+  } */
 }
