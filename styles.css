@@ -8,16 +8,16 @@ body {
 }
 
 header {
-  height: 667px;
-  padding: 10px 0 5px 0px;
-  margin: 0;
+  align-items: center;
   background-color: blueviolet;
   border: 1px solid red;
-  text-align: center;
-  align-items: center;
-  justify-content: space-evenly;
   display: flex;
   flex-direction: column;
+  height: 667px;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 10px 0 5px 0px;
+  text-align: center;
 }
 ul {
   padding: 0;
@@ -40,17 +40,38 @@ li {
   margin: 0;
 }
 
-footer {
-  /* padding: 0;
-    margin: 0;
-    background-color: mediumpurple;
+.cv_section {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0  0 30px 30px;
+    background-color: lightskyblue;
+    width: 100%;
 }
 
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0  0 30px 30px;
+    background-color: lightskyblue;
+    width: 100%;
+}
+
+/* .skills_headline--1
+.skills_list--1
+.skills_headline--2
+.skills_list--2 {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+} */
+
+
+
 footer {
+  padding: 20px 0 0 0;
   background-color: lawngreen;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -68,26 +89,26 @@ footer {
 }
 
 .footer_icons {
-  width: 55%;
+  width: 30%;
 }
 
 .btn_--right {
-display: flex;
-justify-content: flex-end;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-
 .btn_up {
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 100%;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
+  background-color: #4caf50;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 @media (min-width: 500px) {
   header {
@@ -119,7 +140,7 @@ justify-content: flex-end;
   .impressum {
     grid-column: 1 / 6;
   }
-  
+
   .copyright {
     grid-column: 1 / 6;
   }
