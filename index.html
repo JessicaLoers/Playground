@@ -13,8 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">  
 
     <title>Welcome-site</title>
   </head>
@@ -70,7 +71,28 @@
         </g>
       </svg>
 
+      
+      <a href="#main-menue" class="menue-toggle">
+        <span class="material-icons">face</span>
+      </a>
+
+      <h1 class="logo-ham">hamburgers</h1>
+
+      <nav id="main-menue" class="main-menue">
+        <a href="#main-menue-toggle" class="menue-close">
+          <span class=""material-icons"></span>
+        </a>
+        <ul>
+          <li><a href="forms.html">Look at my forms</a></li>
+          <li><a href="grid-layout.html">my skills</a></li>
+          <li><a href="flex-layout.html">Look at my flex</a></li>
+          <li><a href="flex-layout.html">my footer</a></li>
+        </ul>
+      </nav>
+      <a href="#main-menue-toggle" class="backdrop" hidden></a>
+
       <h1>Welcome</h1>
+
       <nav class="navgation">
         <ul>
           <li><a href="forms.html">Look at my forms</a></li>
@@ -81,6 +103,7 @@
       </nav>
     </header>
     <main>
+      
       <!-- CV -->
       <section class="cv_section">
         <!-- Berufserfahrung -->
@@ -98,7 +121,7 @@
                 <li class="cv_list">Abwicklung Approvals</li>
               </ul>
             </ul>
-            <li class="cv_year" >2007 - heute</li>
+            <li class="cv_year">2007 - heute</li>
             <ul>
               <li class="cv_what">Grafikdesignerin</li>
               <ul>
@@ -107,10 +130,12 @@
                 <li class="cv_list">Filmgrafik, Set / Requisiten Design</li>
               </ul>
             </ul>
-            <li class="cv_year" >2010 - 2015</li>
+            <li class="cv_year">2010 - 2015</li>
             <ul>
               <li class="cv_what">Studentische Hilfskraft</li>
-              <li class="cv_what">Bibliothek Kunsthochschule für Medien (KHM)</li>
+              <li class="cv_what">
+                Bibliothek Kunsthochschule für Medien (KHM)
+              </li>
               <ul>
                 <li class="cv_list">Digitalisierung d. Mediathek</li>
                 <li class="cv_list">Erfassung Magazine</li>
@@ -121,7 +146,7 @@
               <li class="cv_what">Assistenz Requisite / Set Deisgn</li>
               <li class="cv_what">u.a Aquafilm, Little Shark Entertainment</li>
             </ul>
-            <li class="cv_year" >2006 - 2008</li>
+            <li class="cv_year">2006 - 2008</li>
             <ul>
               <li class="cv_what">Redakteurin</li>
               <li class="cv_what">Stadtmagazin M'gladbach / Krefeld</li>
@@ -135,26 +160,31 @@
         <div class="school">
           <ul>
             <h2>Ausbildung</h2>
-            <li class="cv_year" >2010 - 2015</li>
+            <li class="cv_year">2010 - 2015</li>
             <ul>
-              <li class="cv_what" >Kunsthochschule für Medien (KHM)</li>
-              <li class="cv_list school_list"><span style="font-weight: bolder;">Studium:</span> Medienkunst</li>
-              <li class="cv_list school_list"><span style="font-weight: bolder;">Abschluss:</span> Diplom</li>
-              
-              
+              <li class="cv_what">Kunsthochschule für Medien (KHM)</li>
+              <li class="cv_list school_list">
+                <span style="font-weight: bolder">Studium:</span> Medienkunst
+              </li>
+              <li class="cv_list school_list">
+                <span style="font-weight: bolder">Abschluss:</span> Diplom
+              </li>
             </ul>
-            <li class="cv_year" >2008 - 2010</li>
+            <li class="cv_year">2008 - 2010</li>
             <ul>
-              <li class="cv_list school_list">TH Köln Campus Deutz</li>
-              <li class="cv_list school_list"><span style="font-weight: bolder;">Studium:</span> Medienprdouktionstechnik</li>
-              <li class="cv_list school_list"><span style="font-weight: bolder;">Abschluss:</span> Grundstudium</li>
-              
-          
+              <li class="cv_what">TH Köln Campus Deutz</li>
+              <li class="cv_list school_list">
+                <span style="font-weight: bolder">Studium:</span>
+                Medienprdouktionstechnik
+              </li>
+              <li class="cv_list school_list">
+                <span style="font-weight: bolder">Abschluss:</span> Grundstudium
+              </li>
             </ul>
             <li class="cv_year">2004 - 2006</li>
             <ul>
               <li class="cv_what">Redaktionsvolontariat</li>
-              <li class="cv_what">Stadtmagazin M'gladbach / Krefeld</li>
+              <li class="cv_list school_list">Stadtmagazin M'gladbach / Krefeld</li>
             </ul>
           </ul>
         </div>

@@ -7,30 +7,13 @@ body {
   margin: 0;
 }
 
-header {
-  align-items: center;
-  background-color: #20201e;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  height: 667px;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 10px 0 5px 0px;
-  text-align: center;
-}
 
-h1 {
+h2 {
   font-family: 'Montserrat', sans-serif;
- font-weight: 800;
-  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.3rem;
   line-height: 8px;
-  color: #71763e;
-  /* writing-mode: vertical-rl; */
-  -webkit-font-feature-settings: ;
-  -webkit-transform: rotate(180deg);
-  text-orientation: mixed;
-  font-variation-settings: "wdth" 115;
 }
 
 ul {
@@ -39,49 +22,50 @@ ul {
 }
 
 a {
-  xtext-decoration: none;
-  color: white;
-}
-
-.navgation ul li {
-  color: white;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 1.4rem;
-  line-height: 3rem;
   text-decoration: none;
-  list-style: none;
+  color: white;
 }
 
-.logo {
-  background-color: none;
-  padding: 0;
-  width: 50%;
-}
 
-.logo:hover {
-  filter: 
-  invert(0.5)
-  sepia(1)
-  hue-rotate(200deg)
-  saturate(4)
-  brightness(1);
-}
 
-.navgation ul {
-  background-color: none;
-  padding: 0;
-  margin: 0;
-}
 
 .cv_section {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   padding: 0 0 30px 30px;
-  background-color: rgb(172, 10, 187);
+  background-color: #edf1ed;
   width: 100%;
+  
 }
+
+.cv_year {
+  list-style: none;
+  font-size: 0.9em;
+  font-weight: 700;
+  padding: 20px 0 10px 0
+  
+}
+
+.cv_what {
+  list-style: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.cv_list {
+  font-weight: normal;
+  list-style: disc;
+  list-style-position: inside;
+  font-size: 1em;
+  line-height: 1.6em;
+}
+.school_list {
+  list-style: none;
+}
+
 
 .skills {
   display: flex;
@@ -132,23 +116,7 @@ footer {
   font-size: 16px;
 }
 
-@media (min-width: 500px) {
-  header {
-    height: 20%;
-    text-align: left;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .logo {
-    width: 150px;
-    margin: 0 0 0 30px;
-  }
-  .nav ul {
-    margin: 0 30px 0 0;
-  }
-  h1 {
-    display: none;
-  }
+@media (min-width: 768px) {
 
   .cv_section {
     display: flex;
