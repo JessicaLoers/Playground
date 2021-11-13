@@ -10,61 +10,53 @@
   border: 0;
 }
 
-
 header {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    height: 736px;
-    /* iPhone 6/7/8 Plus */
-    justify-content: space-between;
-    
-    background-color: #5e5e54;
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  h1 {
-    align-self: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 3rem;
-    line-height: 8px;
-    color: #71763e;
-    /* writing-mode: vertical-rl; */
-    -webkit-font-feature-settings: ;
-    -webkit-transform: rotate(180deg);
-    text-orientation: mixed;
-    font-variation-settings: "wdth" 115;
-    margin: 0 0 100px 0;
-    xpadding: 50px;
-  }
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 736px;
+  /* iPhone 6/7/8 Plus */
+  justify-content: space-between;
 
-  .logo_svg {
-    fill: #edf1ed;
-    background-color: none;
-    padding: 0;
-    width: 50%;
-    align-self: center;
-    animation-name: slidein;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
-  
-  .logo_svg:hover {
-    filter: 
-      invert(0.5)
-      sepia(1)
-      hue-rotate(200deg)
-      saturate(4)
-      brightness(1);
-  }
-  
-  
-  /* @keyframes slidein {
+  background-color: #edf1ed;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 8px;
+  color: #333;
+  /* writing-mode: vertical-rl; */
+  -webkit-font-feature-settings: ;
+  -webkit-transform: rotate(180deg);
+  text-orientation: mixed;
+  font-variation-settings: "wdth" 115;
+  margin: 0 0 100px 0;
+  xpadding: 50px;
+}
+
+.logo_svg {
+  fill: #333;
+  background-color: none;
+  padding: 0;
+  width: 50%;
+  align-self: center;
+  animation-name: slidein;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.logo_svg:hover {
+  filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);
+}
+
+/* @keyframes slidein {
     from {
       transform: rotateX(180deg);
     }
@@ -76,24 +68,17 @@ header {
       
     }
   } */
-  
-  .navgation ul {
-    background-color: none;
-    padding: 0;
-    margin: 0;
-  }
-
 
 /* Button styling */
 .menu-toggle {
   display: inline-block;
   padding: 30px 20px;
-  color: rgb(212, 14, 137);
+  color: #333;
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  color: #c00;
+  color: rgb(148, 126, 5);
 }
 
 /*
@@ -115,7 +100,7 @@ header {
 .main-menu ul {
   list-style: none;
   margin: 0;
-  padding: 2.5em 0 0;
+  padding: 150px 0 0;
   min-height: 100%;
   width: 200px;
   background: #1a1a1a;
@@ -123,12 +108,12 @@ header {
 
 .main-menu a {
   display: block;
-  padding: 0.75em 15px;
+  padding: 0.75em 30px;
   line-height: 1em;
   font-family: "Montserrat", sans-serif;
-  font-weight: normal;
+  font-weight: bolder;
   line-height: 8px;
-  color: rgb(211, 11, 11);
+  color: #edf1ed;
   text-decoration: none;
 }
 
@@ -141,16 +126,13 @@ header {
 .main-menu .menu-close {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 20px;
 }
 
 /*
    On small devices, allow it to toggle...
   */
-/*
-   :target for non-JavaScript
-   [aria-expanded] will be used if/when JavaScript is added to improve interaction, though it's completely optional.
-  */
+
 .main-menu:target,
 .main-menu[aria-expanded="true"] {
   display: block;
@@ -203,6 +185,19 @@ header {
    Horizontal menu
   */
 @media (min-width: 768px) {
+  header {
+    height: 20%;
+    flex-direction: row-reverse;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .logo_svg {
+    width: 100px;
+    margin: 20px;
+  }
   .menu-toggle,
   .main-menu .menu-close {
     display: none;
@@ -211,11 +206,7 @@ header {
   /* Undo positioning of off-canvas menu */
   .main-menu {
     position: relative;
-    left: auto;
-    top: auto;
-    height: auto;
     display: flex;
-    justify-items: center;
   }
 
   .main-menu ul {
@@ -232,14 +223,15 @@ header {
   }
 
   .main-menu a {
-    color: #06c;
-    border: 0 !important; /* Remove borders from off-canvas styling */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
   }
 
   .main-menu a:hover,
   .main-menu a:focus {
     background: none; /* Remove background from off-canvas styling */
     color: #c00;
+    text-decoration: none;
   }
 }
 
@@ -251,24 +243,3 @@ header {
 *:after {
   box-sizing: border-box;
 }
-
-
-@media (min-width: 500px) {
-    header {
-      height: 20%;
-      text-align: left;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    .logo_svg {
-      width: 150px;
-      margin: 0 0 0 30px;
-    }
-    .nav ul {
-      margin: 0 30px 0 0;
-    }
-    h1 {
-      display: none;
-    }
-  }
-  

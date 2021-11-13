@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
+    <link href="menue-style.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,14 +14,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">  
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <title>Welcome-site</title>
   </head>
   <body>
-    <header>
+    <header id="header">
+      <a
+        href="#main-menu"
+        id="main-menu-toggle"
+        class="menu-toggle"
+        aria-label="Open main menu"
+      >
+        <span class="sr-only">Open main menu</span>
+        <span class="material-icons" aria-hidden="true">menue</span>
+      </a>
+
+      <nav id="main-menu" class="main-menu" aria-label="Main menu">
+        <a
+          href="#main-menu-toggle"
+          id="main-menu-close"
+          class="menu-close"
+          aria-label="Close main menu"
+        >
+          <span class="sr-only">Close main menu</span>
+          <span class="material-icons" aria-hidden="true">close</span>
+        </a>
+        <ul>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#cv_section">CV</a></li>
+          <li><a href="/forms.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a
+        href="#main-menu-toggle"
+        class="backdrop"
+        tabindex="-1"
+        aria-hidden="true"
+        hidden
+      ></a>
       <svg
         class="logo_svg"
         version="1.1"
@@ -36,7 +73,7 @@
           <path
             class="st0"
             d="M255.8,616.9V206.3L68.5,318l45.3,45.9v236.7c0,27.8-9.5,54.1-28.6,78.8C66.1,704.2,37.7,726,0,744.8l136.4,82
-       c16.9-11.8,32.7-25.7,47.3-41.7c14.6-16,27.2-33.2,37.8-51.6c10.6-18.3,19-37.4,25.1-57.2C252.7,656.5,255.8,636.7,255.8,616.9z"
+     c16.9-11.8,32.7-25.7,47.3-41.7c14.6-16,27.2-33.2,37.8-51.6c10.6-18.3,19-37.4,25.1-57.2C252.7,656.5,255.8,636.7,255.8,616.9z"
           />
 
           <rect
@@ -59,53 +96,33 @@
           <path
             class="st0"
             d="M872,368c-2.6-31.4-11.1-60.3-25.4-86.7c-14.3-26.4-32.7-48.8-55.1-67.4c-22.5-18.5-48.1-32.6-76.9-42.1
-       s-59-13.2-90.7-11s-61,10-87.9,23.5c-26.8,13.4-49.8,30.9-68.9,52.3c-8.7,9.7-16.4,20.1-23.1,31.2V160.3V95.6l-108.5,64.7
-       l-64.2,38.3l-14.6,8.6l45.2,45.3v400.6l-59.3,79.2h261.5H634V606.8c9,0.4,18.1,0.2,27.3-0.4c31.6-2.2,60.9-10,87.8-23.4
-       s49.9-30.8,69-52.3c19-21.4,33.5-46,43.2-73.8C871.1,429.1,874.6,399.5,872,368z M460.5,675.4l-16.2,7.6v-28.7l-0.3-0.4V495.5
-       c13.4,22.2,30,41.4,49.7,57.8c22.5,18.5,48.1,32.6,76.9,42.1c13,4.3,26.3,7.4,39.9,9.3L460.5,675.4z M632.5,474.1
-       c-26.1,12.5-54.2,19.8-84.2,21.9c-17.5,1.2-35.9,0.3-55.4-2.6c8-28.5,19.6-55.4,34.8-80.9c14.4-24.3,31.7-46.1,51.9-65.4
-       c6,20.6,15.1,43.3,28.7,62c14.5,19.9,34.8,36.4,53.5,48.8C652.4,463.8,642.6,469.3,632.5,474.1z M757.8,357.5
-       c-15.1,25.8-33.3,48.5-54.4,68.2c-1,0.9-2,1.9-3.1,2.8c-6-21.3-15.2-45.2-29.4-64.8c-14.2-19.6-34-35.8-52.3-48.1
-       c11.2-7.5,23-14.3,35.2-20.1c26.1-12.5,54.2-19.8,84.2-21.9c16.9-1.2,35.1-0.3,54.6,2.6C784.5,304.7,772.9,331.8,757.8,357.5z"
+     s-59-13.2-90.7-11s-61,10-87.9,23.5c-26.8,13.4-49.8,30.9-68.9,52.3c-8.7,9.7-16.4,20.1-23.1,31.2V160.3V95.6l-108.5,64.7
+     l-64.2,38.3l-14.6,8.6l45.2,45.3v400.6l-59.3,79.2h261.5H634V606.8c9,0.4,18.1,0.2,27.3-0.4c31.6-2.2,60.9-10,87.8-23.4
+     s49.9-30.8,69-52.3c19-21.4,33.5-46,43.2-73.8C871.1,429.1,874.6,399.5,872,368z M460.5,675.4l-16.2,7.6v-28.7l-0.3-0.4V495.5
+     c13.4,22.2,30,41.4,49.7,57.8c22.5,18.5,48.1,32.6,76.9,42.1c13,4.3,26.3,7.4,39.9,9.3L460.5,675.4z M632.5,474.1
+     c-26.1,12.5-54.2,19.8-84.2,21.9c-17.5,1.2-35.9,0.3-55.4-2.6c8-28.5,19.6-55.4,34.8-80.9c14.4-24.3,31.7-46.1,51.9-65.4
+     c6,20.6,15.1,43.3,28.7,62c14.5,19.9,34.8,36.4,53.5,48.8C652.4,463.8,642.6,469.3,632.5,474.1z M757.8,357.5
+     c-15.1,25.8-33.3,48.5-54.4,68.2c-1,0.9-2,1.9-3.1,2.8c-6-21.3-15.2-45.2-29.4-64.8c-14.2-19.6-34-35.8-52.3-48.1
+     c11.2-7.5,23-14.3,35.2-20.1c26.1-12.5,54.2-19.8,84.2-21.9c16.9-1.2,35.1-0.3,54.6,2.6C784.5,304.7,772.9,331.8,757.8,357.5z"
           />
         </g>
       </svg>
-
-      
-      <a href="#main-menue" class="menue-toggle">
-        <span class="material-icons">face</span>
-      </a>
-
-      <h1 class="logo-ham">hamburgers</h1>
-
-      <nav id="main-menue" class="main-menue">
-        <a href="#main-menue-toggle" class="menue-close">
-          <span class=""material-icons"></span>
-        </a>
-        <ul>
-          <li><a href="forms.html">Look at my forms</a></li>
-          <li><a href="grid-layout.html">my skills</a></li>
-          <li><a href="flex-layout.html">Look at my flex</a></li>
-          <li><a href="flex-layout.html">my footer</a></li>
-        </ul>
-      </nav>
-      <a href="#main-menue-toggle" class="backdrop" hidden></a>
-
       <h1>Welcome</h1>
-
-      <nav class="navgation">
-        <ul>
-          <li><a href="forms.html">Look at my forms</a></li>
-          <li><a href="grid-layout.html">my skills</a></li>
-          <li><a href="flex-layout.html">Look at my flex</a></li>
-          <li><a href="flex-layout.html">my footer</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
-      
+      <div
+        class="qoute_section"
+        style="background-image: url(/svgs/button_up.svg)"
+      >
+        <h2 class="quote">
+          Things aren't
+          <pre>#000000</pre>
+          and
+          <pre>#ffffff</pre>
+        </h2>
+      </div>
       <!-- CV -->
-      <section class="cv_section">
+      <section id="cv_section" class="cv_section">
         <!-- Berufserfahrung -->
         <div class="work">
           <ul>
@@ -184,7 +201,9 @@
             <li class="cv_year">2004 - 2006</li>
             <ul>
               <li class="cv_what">Redaktionsvolontariat</li>
-              <li class="cv_list school_list">Stadtmagazin M'gladbach / Krefeld</li>
+              <li class="cv_list school_list">
+                Stadtmagazin M'gladbach / Krefeld
+              </li>
             </ul>
           </ul>
         </div>
@@ -208,9 +227,11 @@
           <li>Kreativität</li>
         </ul>
       </section>
-
       <div class="btn_--right">
-        <button class="btn_up">UP</button>
+        <a href="#header" class="btn_up">
+          <span class="sr-only">go up</span>
+          <span class="material-icons">north</span>
+        </a>
       </div>
     </main>
 
