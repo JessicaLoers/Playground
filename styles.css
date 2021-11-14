@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: lightblue;
+  background-color: rgb(37, 75, 42);
   margin: 0;
 }
 
@@ -18,10 +18,10 @@ h2 {
 
 .quote_section {
   display: flex;
-
 }
 
 .quote {
+  color: #58ec5d;
   font-size: 2em;
   line-height: 2em;
   text-align: center;
@@ -33,12 +33,19 @@ ul {
 }
 
 a {
+  font-family: 'Montserrat', sans-serif;;
   text-decoration: none;
-  color: white;
+  color: #333;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;;
+  color: #333;
 }
 
 
 .cv_section {
+  color: #333;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
@@ -49,6 +56,20 @@ a {
   
 }
 
+.work {
+  border-top: #333 solid 2px;
+  margin: 0 0 30px 0;
+}
+
+.school {
+  border-top: #333 solid 2px;
+}
+
+
+.headlines_cv {
+  margin: 30px 0 0 0 ;
+  padding: 0;
+}
 .cv_year {
   list-style: none;
   font-size: 0.9em;
@@ -77,17 +98,46 @@ a {
 
 
 .skills {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 0 0 30px 30px;
-  background-color: lightskyblue;
+
+  background-color: #edf1ed;
   width: 100%;
+  background-color: rgb(37, 75, 42);
+  font-family: 'Montserrat', sans-serif;
+  color: #edf1ed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  xjustify-content: flex-end;
+  align-items: center;
+  padding: 0px 0 0px 0px;
+  
+}
+
+.hard-skills-img {
+  width: 30%;
+  align-self: flex-start;
+  padding: 0 10px;
+}
+
+.soft-skills-img {
+  width: 30%;
+  align-self: flex-start;
+  padding: 0 10px;
+}
+.skills_headline {
+  padding: 0;
+  margin: 50px 0 10px 0;
+}
+
+.skills_list {
+  list-style: none;
+  line-height: 1.5em;
+
 }
 
 footer {
   padding: 20px 0 0 0;
-  background-color: rgb(214, 188, 38);
+  background-color: #edf1ed;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -114,7 +164,7 @@ footer {
 }
 
 .btn_up {
-  background-color: #4caf50;
+  background-color: #58ec5d;
   border: none;
   border-radius: 100%;
   color: white;
@@ -126,8 +176,46 @@ footer {
 }
 
 @media (min-width: 768px) {
+  body {
+    xbackground-color: #edf1ed;
+  }
 
-  .cv_section {
+  .grid_section {
+    display: grid;
+    grid-template-columns:  2fr 1fr;
+    grid-template-rows: 1fr;
+    
+    xjustify-content: center;
+    xwidth: 80%;
+    xalign-items: center;
+    xtext-align: center;
+  }
+.skills_grid {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  align-self: start;
+  padding: 0;
+  margin: 0;
+}
+.work {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: stretch;
+  padding-left: 200px;
+}
+
+.school {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: stretch;
+  padding-left: 200px;
+}
+
+.qoute_section {
+  display: none;
+}
+
+  /* .cv_section {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -136,10 +224,10 @@ footer {
     padding: 30px 0 30px 30px;
     background-color: #edf1ed;
     width: 100%;
-  }
+  } */
 
   footer {
-    background-color: lawngreen;
+    background-color: #edf1ed;
     display: grid;
     /* grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr); */
@@ -167,4 +255,6 @@ footer {
   .icon_behance {
       grid-column-start:  5 / 6;
   } */
+
+ 
 }
